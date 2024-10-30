@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -10,8 +11,11 @@ Route::get('home', function () {
     return view('page.dashbord');
 });
 
+Route::resource('user',UserController::class);
+
 
 //routing dipindahkan ke fortify yang ada di providers
+
 // Route::get('/login', function () {
 //     return view('page.auth.login');
 // })->name('login');

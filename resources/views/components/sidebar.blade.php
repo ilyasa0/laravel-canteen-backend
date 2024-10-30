@@ -8,7 +8,7 @@
         </div>
         <ul class="sidebar-menu">
             <li class="menu-header">Dashboard</li>
-            {{-- <li class="nav-item dropdown {{ $type_menu === 'dashboard' ? 'active' : '' }}"> --}}
+            {{-- < class="nav-item dropdown {{ $type_menu === 'dashboard' ? 'active' : '' }}"> --}}
                 <li class="nav-item dropdown">
                 <a href="#"
                     class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>Dashboard</span></a>
@@ -23,6 +23,19 @@
                     </li>
                 </ul>
             </li>
+
+            <li class="nav-item dropdown">
+                <a href="#"
+                    class="nav-link has-dropdown"><i class="fas fa-fire"></i><span>All users</span></a>
+                <ul class="dropdown-menu">
+                    <li class='{{ Request::is('dashboard-general-dashboard') ? 'active' : '' }}'>
+                        <a class="nav-link"
+                            href="{{ route('user.index') }}"> users</a>
+                    </li>
+                    
+                </ul>
+            
+        </ul>
            
     </aside>
 </div>
